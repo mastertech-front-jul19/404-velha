@@ -12,5 +12,7 @@ for(let quadradinho of quadradinhos){
     }
 
     controleClique = !controleClique;
+
+    quadradinho.onclick = null;
   }
 }
