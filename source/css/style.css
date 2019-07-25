@@ -21,4 +21,11 @@ h1{
   max-width: 500px;
   max-height: 500px;
   background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5%;
+}
+
+.quadradinho{
+  background-color: white;
 }
