@@ -28,4 +28,7 @@ h1{
 
 .quadradinho{
   background-color: white;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
 }
