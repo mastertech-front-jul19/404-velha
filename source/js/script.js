@@ -4,15 +4,6 @@ let novoJogo = document.querySelector("button");
 
 let controleClique = true;
 
-novoJogo.onclick = function(){
-  for (let quadradinho of quadradinhos) {
-    quadradinho.onclick = tratarClique;
-    quadradinho.style.backgroundImage = "";
-  }
-  novoJogo.style.display = "";
-  titulo.innerHTML = "Jogo da Velha!";
-}
+novoJogo.onclick = iniciarTabuleiro;
 
-for (let quadradinho of quadradinhos) {
-  quadradinho.onclick = tratarClique;
-}
+iniciarTabuleiro();
