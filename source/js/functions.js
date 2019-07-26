@@ -20,3 +20,11 @@ function escolherQuadradinho(quadradinho, imagem){
   quadradinho.style.backgroundImage = `url("imagens/${imagem}.jpg")`;
 };
 
+function deuVelha(){
+  for(let quadradinho of quadradinhos){
+    if(quadradinho.style.backgroundImage === ""){
+      return false;
+    }
+  }
+  return true;
+}

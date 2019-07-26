@@ -2,13 +2,13 @@ let quadradinhos = document.querySelectorAll(".quadradinho");
 
 let controleClique = true;
 
-for(let quadradinho of quadradinhos){
-  quadradinho.onclick = function(){
+for (let quadradinho of quadradinhos) {
+  quadradinho.onclick = function () {
     let simbolo;
-    if(controleClique){
+    if (controleClique) {
       simbolo = "X";
     }
-    else{
+    else {
       simbolo = "O";
     }
 
@@ -18,11 +18,14 @@ for(let quadradinho of quadradinhos){
 
     quadradinho.onclick = null;
 
-    if(alguemGanhou()){
+    if (alguemGanhou()) {
       console.log("fim de jogo");
-      for(let cada of quadradinhos){
+      for (let cada of quadradinhos) {
         cada.onclick = null;
       }
+    }
+    else if (deuVelha()) {
+      console.log("VELHA");
     }
   }
 }
