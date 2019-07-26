@@ -28,3 +28,38 @@ function deuVelha(){
   }
   return true;
 }
+
+function tratarClique(evento){
+  let simbolo;
+    if (controleClique) {
+      simbolo = "X";
+    }
+    else {
+      simbolo = "O";
+    }
+
+    escolherQuadradinho(evento.target, simbolo);
+
+    controleClique = !controleClique;
+
+    evento.target.onclick = null;
+
+    if (alguemGanhou()) {
+      let vencedor;
+      if(controleClique){
+        vencedor = "O";
+      }
+      else{
+        vencedor = "X";
+      }
+      titulo.innerHTML = `FIM DE JOGO! O vencedor foi ${vencedor}`;
+      for (let cada of quadradinhos) {
+        cada.onclick = null;
+      }
+      novoJogo.style.display = "inline-block";
+    }
+    else if (deuVelha()) {
+      titulo.innerHTML = "FIM DE JOGO! Deu velha :(";
+      novoJogo.style.display = "inline-block";
+    }
+}

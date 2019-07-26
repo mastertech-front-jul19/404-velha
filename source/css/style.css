@@ -32,3 +32,19 @@ h1{
   background-position: center;
   cursor: pointer;
 }
+
+button{
+  border: none;
+  background-color: rgba(0, 128, 0, 0.767);
+  color: purple;
+  height: 50px;
+  border-radius: 25px;
+  font-weight: bolder;
+  cursor: pointer;
+  display: none;
+  margin: 10px;
+}
+
+.flex{
+  display: flex;
+}
