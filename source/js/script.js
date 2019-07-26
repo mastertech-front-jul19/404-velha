@@ -1,4 +1,5 @@
 let quadradinhos = document.querySelectorAll(".quadradinho");
+let titulo = document.querySelector("h1");
 
 let controleClique = true;
 
@@ -26,13 +27,13 @@ for (let quadradinho of quadradinhos) {
       else{
         vencedor = "X";
       }
-      console.log(`FIM! O vencedor foi ${vencedor}`);
+      titulo.innerHTML = `FIM DE JOGO! O vencedor foi ${vencedor}`;
       for (let cada of quadradinhos) {
         cada.onclick = null;
       }
     }
     else if (deuVelha()) {
-      console.log("VELHA");
+      titulo.innerHTML = "FIM DE JOGO! Deu velha :(";
     }
   }
 }
