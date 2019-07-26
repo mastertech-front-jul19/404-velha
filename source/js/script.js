@@ -19,7 +19,14 @@ for (let quadradinho of quadradinhos) {
     quadradinho.onclick = null;
 
     if (alguemGanhou()) {
-      console.log("fim de jogo");
+      let vencedor;
+      if(controleClique){
+        vencedor = "O";
+      }
+      else{
+        vencedor = "X";
+      }
+      console.log(`FIM! O vencedor foi ${vencedor}`);
       for (let cada of quadradinhos) {
         cada.onclick = null;
       }
