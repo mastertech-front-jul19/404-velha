@@ -18,7 +18,7 @@ function alguemGanhou() {
 
 function escolherQuadradinho(quadradinho, imagem) {
   quadradinho.style.backgroundImage = `url("imagens/${imagem}.jpg")`;
-};
+}
 
 function deuVelha() {
   for (let quadradinho of quadradinhos) {
@@ -30,10 +30,7 @@ function deuVelha() {
 }
 
 function tratarClique(evento) {
-  let simbolo = "O";
-  if (controleClique) {
-    simbolo = "X";
-  }
+  let simbolo = controleClique ? "O" : "X";
 
   escolherQuadradinho(evento.target, simbolo);
 
@@ -63,12 +60,12 @@ function jogoAcabou() {
 }
 
 function finalizar() {
-  let vencedor = "o jogador X";
-  if (controleClique) {
-    vencedor = "o jogador O";
-  }
+  let vencedor;
   if (deuVelha()) {
     vencedor = "A VELHA";
+  }
+  else{
+    vencedor = controleClique ? "o jogador X" : "o jogador O"
   }
 
   titulo.innerHTML = `FIM DE JOGO! O vencedor foi ${vencedor}!`;
