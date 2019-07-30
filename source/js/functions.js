@@ -44,10 +44,14 @@ function tratarClique(evento) {
 }
 
 function iniciarTabuleiro() {
+  controleClique = false;
+
   for (let quadradinho of quadradinhos) {
     quadradinho.onclick = tratarClique;
     quadradinho.style.backgroundImage = "";
   }
+
+  modal.style.display = "";
 }
 
 function jogoAcabou() {
@@ -69,4 +73,8 @@ function finalizar() {
   for (let cada of quadradinhos) {
     cada.onclick = null;
   }
+
+  vencedorModal.innerHTML = `O vencedor foi ${vencedor}`;
+  modal.style.display = "flex";
+
 }
