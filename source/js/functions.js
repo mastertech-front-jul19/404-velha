@@ -48,8 +48,6 @@ function iniciarTabuleiro() {
     quadradinho.onclick = tratarClique;
     quadradinho.style.backgroundImage = "";
   }
-  novoJogo.style.display = "";
-  titulo.innerHTML = "Jogo da Velha!";
 }
 
 function jogoAcabou() {
@@ -68,10 +66,7 @@ function finalizar() {
     vencedor = controleClique ? "o jogador X" : "o jogador O"
   }
 
-  titulo.innerHTML = `FIM DE JOGO! O vencedor foi ${vencedor}!`;
-
   for (let cada of quadradinhos) {
     cada.onclick = null;
   }
-  novoJogo.style.display = "inline-block";
 }
